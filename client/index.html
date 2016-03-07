@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>newfamily-example</title>
+    <base href="/"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <!-- 1. Load libraries -->
+    <script src="libs/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="libs/systemjs/dist/system.src.js"></script>
+    <script src="libs/rxjs/bundles/Rx.js"></script>
+    <script src="libs/angular2/bundles/angular2.dev.js"></script>
+    <script src="libs/angular2/bundles/router.dev.js"></script>
+    <script src="libs/angular2/bundles/http.dev.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/bootstrap.js')
+            .then(null, console.error.bind(console));
+    </script>
+    
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+    <my-app></my-app>
+  </body>
+ 
+</html>
